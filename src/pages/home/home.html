@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+    Coffe App
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+ <!-- <div *ngIf="value==1">
+   <p>mash is the best</p>
+  </div> -->
+  
+      <ion-input  placeholder="Name" style="text-align: center" type="text" name="name" [(ngModel)]="name" required>
+      </ion-input>
+    <br>
+<hr>
+   <ion-list>
+
+<h1 style="text-align: center">TOPPINGS</h1>
+    <ion-item>
+      <ion-label>Whipped Cream</ion-label>
+      <ion-checkbox  (click)="event1()" [(ngModel)]="whippedcream"></ion-checkbox>
+    </ion-item>
+  
+   
+  
+    <ion-item>
+      <ion-label>Chocolate</ion-label>
+      <ion-checkbox  (click)="event()" [(ngModel)]="chocolate"></ion-checkbox>
+    </ion-item>
+
+    <h2 style="text-align: center"  > QUANTITY</h2>
+    
+    <div id="button" style="text-align:center">
+<button ion-button   (click)="onClick1()">-</button>
+  
+     {{valueone}}
+  
+<button ion-button (click)="onClick2()">+</button><br>
+</div>
+
+<h3  style="text-align:center">Order Summary</h3>
+ <div *ngIf="display ==1">
+   <p>{{name}}</p>
+   <p>{{whippedcreammsg}}</p>
+   <p>{{chocolatemsg}}</p>
+   <p>Quantity:{{valueone}}</p>
+   <p>Total: $14.00 </p>
+   <p>Thank You</p>
+
+  </div><br>
+  
+  <div  id="button" style="text-align:center">
+  <button ion-button (click)="onClick3()" >ORDER</button><br>
+
+  <br>
+<button ion-button (click)="onClick4()" >RESET</button>
+<!-- <button ion-button href >EMAIL ORDER</button> -->
+  </div>
+
+  </ion-list>
+
+
+
+ <!-- <div *ngIf="value==2">
+  <p>mash is the cool</p>
+</div> -->
+</ion-content>
